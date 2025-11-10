@@ -53,3 +53,34 @@ h1:hover {
   fill: url(#instagram-gradient);
   filter: drop-shadow(0 0 8px rgba(221, 42, 123, 0.7));
 }
+.center-section {
+  position: absolute;
+  top: 50%;
+  right: 50px; /* distância da borda direita */
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  z-index: 1;
+}
+
+.profile-frame {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(255,255,255,0.2);
+  animation: float 3s ease-in-out infinite;
+}
+
+.profile-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
